@@ -5,10 +5,17 @@ def read_book(book):
         return f.read()
 
 
+def count_words(book_content):
+    words = book_content.split()
+    # return print(words)
+    return len(words)
+
+
 def main():
     book_loc = "books/frankenstein.txt"
-    book_text = read_book(book_loc)
-    print(book_text)
+    book_content = read_book(book_loc)
+    book_words = count_words(book_content)
+    print(f"Total words in the book: {book_words}")
 
 
 if __name__ == "__main__":
