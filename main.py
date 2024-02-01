@@ -40,9 +40,24 @@ def main():
     book_words = count_words(book_content)
     char_count = char_counter(book_content)
     sorted_char_list = sort_chars(char_count)
-    print(f"Total words in the book: {book_words}")
-    print(f"Total chars in the book: {char_count}")
-    print(f"List of sorted chars: {sorted_char_list}")
+    # print(f"Total words in the book: {book_words}")
+    # print(f"Total chars in the book: {char_count}")
+    # print(f"List of sorted chars: {sorted_char_list}")
+    print("+++++++++++++++++++++++++++++++++++")
+    print(f"--- Begin report of {book_loc} ---")
+    print("+++++++++++++++++++++++++++++++++++")
+    print(f"{book_words} words found in the document")
+    print()
+
+    for item in sorted_char_list:
+        if not item["char"].isalpha():
+            continue
+        print(
+            f"The '{item['char']}' character was found {item['count']} times")
+
+    print("+++++++++++++++++++++++++++++++++++")
+    print(f"--- End report of {book_loc} ---")
+    print("+++++++++++++++++++++++++++++++++++")
 
 
 if __name__ == "__main__":
