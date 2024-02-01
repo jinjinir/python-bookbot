@@ -14,7 +14,8 @@ The application takes in a text file, preferrably a book, and counts the number 
   ```bash
   cd python-bookbot 
   ```
-- Create a books 
+- Edit `main.py` and replace the value of `book_loc` in the `main()` function. Pass the path of the book/text you want the application to run against.
+  It's recommended to make a `books` directory and place the book/text there.
 - Run the application:
   ```bash
   python3 main.py
